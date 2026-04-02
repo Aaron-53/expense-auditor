@@ -49,7 +49,7 @@ class DonutReceiptExtractor:
             "DONUT_MODEL", "naver-clova-ix/donut-base-finetuned-cord-v2"
         )
         # Processor handles image preprocessing, prompt tokenization, and decoded output parsing.
-        self.processor = DonutProcessor.from_pretrained(self.model_name)
+        self.processor = DonutProcessor.from_pretrained(self.model_name, use_fast = True)
         self.model = VisionEncoderDecoderModel.from_pretrained(self.model_name)
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model.to(self.device)

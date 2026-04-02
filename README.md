@@ -42,6 +42,23 @@ curl -X POST "http://127.0.0.1:8000/ingest" ^
   -F "file=@C:\path\to\receipt.jpg"
 ```
 
+## 4) Run Frontend (Vite + Tailwind)
+
+The frontend lives in `frontend/` and is plain JavaScript (no TypeScript).
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+Open the URL shown by Vite (typically `http://127.0.0.1:5173`).
+
+Dev proxy routes are already configured:
+
+- `/api-ingestion/*` -> `http://127.0.0.1:8000/*`
+- `/api-validation/*` -> `http://127.0.0.1:8001/*`
+
 ## Notes
 
 - Default OCR engine is `donut` using model `naver-clova-ix/donut-base-finetuned-cord-v2`.
