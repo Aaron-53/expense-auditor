@@ -1,0 +1,19 @@
+name: expense-audit
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - fastapi==0.115.12
+      - uvicorn[standard]==0.34.0
+      - pydantic==2.11.3
+      - python-multipart==0.0.20
+      - pillow==11.2.1
+      - opencv-python-headless==4.11.0.86
+      - numpy==2.2.5
+      - transformers==4.51.3
+      - torch==2.6.0
+      - requests==2.32.3
+      - python-dateutil==2.9.0.post0
+      - boto3==1.37.37
